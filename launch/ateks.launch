@@ -1,0 +1,35 @@
+<launch>
+
+<!-- add the world file for teknopark-->
+  <include file="$(find ateks)/launch/empty_world.launch">
+    <arg name="world_name" value="$(find ateks)/worlds/teknopark.world"/>
+  </include>
+  
+ <!-- add ateks model to the system--> 
+  <arg name="name" default="ateks"/>
+  <arg name="model" default="$(find ateks)/urdf/ateks.gazebo.xacro"/>
+  <arg name="x" default="0.0"/>
+  <arg name="y" default="1.0"/>
+  <arg name="z" default="0"/>
+
+  <param name="robot_description" command="$(find xacro)/xacro.py '$(arg model)'" />
+   
+  <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model"
+     args="-param robot_description
+           -urdf
+           -x $(arg x)
+           -y $(arg y)
+           -z $(arg z)
+           -model $(arg name)"
+     respawn="false" output="screen"/>
+     
+ <!--    
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"
+    respawn="false" output="screen">
+    <remap from="/joint_states" to="/joint_states" />
+  </node>
+  <node name="joint_state_publisher" pkg="joint_state_publisher"
+	type="joint_state_publisher" />
+	-->
+
+</launch>

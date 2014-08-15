@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+
+<robot  name="ateks"  xmlns:xacro="http://ros.org/wiki/xacro">
+
+    <!-- Included URDF Files -->
+    <xacro:include filename="$(find ateks)/urdf/ateks_base.urdf.xacro" /> 
+  <!--  <xacro:include filename="$(find ateks)/urdf/ateks_sonar.urdf.xacro" /> -->
+
+    
+    <xacro:ateks_base_macro />
+    <xacro:ateks_caster prefix="left" reflect="-1"/>
+    <xacro:ateks_caster prefix="right" reflect="1"/>
+    <xacro:wheel prefix="left" reflect="-1"/>
+    <xacro:wheel prefix="right" reflect="1"/>
+    
+<!--
+    <xacro:ateks_sonar prefix="ult1" x="0.385" y="-0.255" z="0.395" roll="0" pitch="0" yaw="0"/>
+    <xacro:ateks_sonar prefix="ult2" x="0.555" y="-0.105" z="0.23" roll="0" pitch="0" yaw="0"/>
+    <xacro:ateks_sonar prefix="ult3" x="0.555" y="0.105" z="0.23" roll="0" pitch="0" yaw="0"/>
+    <xacro:ateks_sonar prefix="ult4" x="0.385" y="0.255" z="0.395" roll="0" pitch="0" yaw="0"/>
+    <xacro:ateks_sonar prefix="ult5" x="0.145" y="0.25" z="0.35" roll="0" pitch="0" yaw="1.57"/>
+    <xacro:ateks_sonar prefix="ult6" x="-0.215" y="0.25" z="0.39" roll="0" pitch="0" yaw="1.57"/>
+    <xacro:ateks_sonar prefix="ult7" x="-0.555" y="0.20" z="0.26" roll="0" pitch="0" yaw="3.14"/>
+    <xacro:ateks_sonar prefix="ult8" x="-0.555" y="-0.20" z="0.26" roll="0" pitch="0" yaw="3.14"/>
+    <xacro:ateks_sonar prefix="ult9" x="-0.215" y="-0.25" z="0.39" roll="0" pitch="0" yaw="-1.57"/>
+    <xacro:ateks_sonar prefix="ult10" x="0.145" y="-0.25" z="0.35" roll="0" pitch="0" yaw="-1.57"/>
+    <xacro:ateks_sonar prefix="ult11" x="2.02625" y="-2.21559" z="0.45" roll="0" pitch="0" yaw="-1.57"/>
+    <xacro:ateks_sonar prefix="ult12" x="2.44625" y="-2.21559" z="0.45" roll="0" pitch="0" yaw="-1.57"/> -->
+</robot>

@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+
+<robot name="ateks" xmlns:xacro="http://ros.org/wiki/xacro">
+  
+    <xacro:include filename="$(find ateks)/urdf/ateks.urdf.xacro" />
+    <!--<xacro:include filename="$(find ateks)/urdf/ateks.plugins.xacro" />-->
+</robot>
