@@ -74,7 +74,7 @@
     </joint>	
     
     <!--____________________ second kinect joint and links _______________________________-->	
-    </link>
+    
     <link name="kinect_dummy2">
       <pose>0 0 0 0 0 0</pose>
 	</link>
